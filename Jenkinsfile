@@ -6,12 +6,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/jsachdev07/DevOpsClassCodes.git'
-            }
-        }
-
         stage('Compile') {
             steps {
                 sh 'mvn compile'
