@@ -4,8 +4,13 @@ pipeline {
         maven 'maven399'
     }
 
-
     stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/jsachdev07/DevOpsClassCodes.git'
+            }
+        }
 
         stage('Compile') {
             steps {
